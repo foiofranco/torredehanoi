@@ -15,7 +15,7 @@ int main(){
 	setlocale (LC_ALL, "Portuguese");
     int discos;
     cout << "[TORRE DE HANOI]" << endl << endl;
-    cout << "Digite o número de discos: ";
+    cout << "Digite o nÃºmero de discos: ";
     cin >> discos;
     hanoi(discos,'A','C','B');
     return 0;
