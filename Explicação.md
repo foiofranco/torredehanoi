@@ -4,7 +4,7 @@
 <h2>Número de Movimentos</h2>
 <p align="justify">O número mínimo de movimentos para encerrar uma partida pode ser obtido através da operação (2^n)-1, onde n é o número de discos alocados na torre de origem e o determinante do nível de dificuldade do jogo.</p>
 
-<h2>Codficação em C++</h2>
+<h2>Codificação em C++</h2>
 
 ~~~~C++
 // Bibliotecas:
