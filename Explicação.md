@@ -12,10 +12,8 @@
 #include <math.h>
 #include <locale.h>
 
-// Abreviação STD:
 using namespace std;
 
-// Função auxiliar:
 void hanoi (int discos, char origem, char destino, char aux){
   if(discos >= 1){
       hanoi(discos-1, origem, aux, destino);
@@ -24,7 +22,6 @@ void hanoi (int discos, char origem, char destino, char aux){
   }
 }
 
-// Função principal:
 int main(){
     setlocale (LC_ALL, "Portuguese");
     int discos = 0, operacao = 0;
@@ -39,3 +36,42 @@ int main(){
 
 ~~~~
 
+<h2>Objetivo do Código</h2>
+<p align="justify">O código em questão tem como finalidade exibir o número mínimo de movimentos para encerrar uma partida e instruir a movimentação de discos com base no mesmo, se referindo a origem como A, destino como B e auxílio como C.</p>
+
+<h2>Composição do Código</h2>
+
+- Bibliotecas:
+~~~C++
+#include <iostream> // Comandos de entrada e saída.
+#include <math.h> // Operações matemáticas avançadas.
+#include <locale.h> // Definição de idioma.
+
+~~~~
+<br>
+
+- Função Principal:
+~~~C++
+int main(){
+    setlocale (LC_ALL, "Portuguese"); // Definição de idioma.
+    int discos = 0, operacao = 0; // Variáveis para armazenar o número de discos e operação matemática do nº de movimentos.
+    cout << "[TORRE DE HANOI]" << endl << endl; // Enunciado.
+    cout << "Digite o número de discos: "; // Impressão do pedido do nº de discos.
+    cin >> discos; // Armazenamento do nº de discos.
+    operacao = ((pow (2,discos))-1); // Operação matemática do nº de movimentos.
+    cout << endl << "Serão necessários apenas " << operacao << " movimentos, intruções: " << endl;
+    hanoi(discos,'A','C','B'); // Chamada da função auxiliar com base no nº e na alternância de caracteres por recursividade.
+    return 0; // Retorno zero para resultado em comando de saída.
+    
+  ~~~
+ <br>
+  
+- Função Auxiliar:
+~~~C++
+void hanoi (int discos, char origem, char destino, char aux){
+  if(discos >= 1){ // Condição para encerramento do programa após a realização do último movimento.
+      hanoi(discos-1, origem, aux, destino); // Redução do número discos com base no padrão de alternância de posição de Hanoi.
+      cout << endl << "- Mova o disco superior de " << origem << " para " << destino << "." << endl; // Impressão das intruções de movimento.
+      hanoi(discos-1, aux, destino, origem); // Redução do número discos com base no padrão de alternância de posição de Hanoi.
+  }
+}
