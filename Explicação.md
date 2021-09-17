@@ -71,7 +71,7 @@ int main(){
 void hanoi (int discos, char origem, char destino, char aux){
   if(discos >= 1){ // Condição para encerramento do programa após a realização do último movimento.
       hanoi(discos-1, origem, aux, destino); // Redução do número discos com base no padrão de alternância de posição de Hanoi.
-      cout << endl << "- Mova o disco superior de " << origem << " para " << destino << "." << endl; // Impressão das intruções de movimento.
+      cout << endl << "- Mova o disco superior de " << origem << " para " << destino << "." << endl; // Impressão das intruções.
       hanoi(discos-1, aux, destino, origem); // Redução do número discos com base no padrão de alternância de posição de Hanoi.
   }
 }
