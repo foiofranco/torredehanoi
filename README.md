@@ -59,7 +59,7 @@ int main(){
     cout << "Digite o número de discos: "; // Impressão do pedido do nº de discos.
     cin >> discos; // Armazenamento do nº de discos.
     operacao = ((pow (2,discos))-1); // Operação matemática do nº de movimentos.
-    cout << endl << "Serão necessários apenas " << operacao << " movimentos, intruções: " << endl;
+    cout << endl << "Serão necessários apenas " << operacao << " movimentos, intruções: " << endl; // Impressão do nº de movimentos.
     hanoi(discos,'A','C','B'); // Chamada da função auxiliar com base no nº e na alternância de caracteres por recursividade.
     return 0; // Retorno zero para resultado em comando de saída.
     
