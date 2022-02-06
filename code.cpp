@@ -3,10 +3,10 @@
 #include <math.h>
 #include <locale.h>
 
-// Facilitação dos comandos em std:
+// FacilitaÃ§Ã£o dos comandos em std:
 using namespace std;
 
-// Função auxiliar:
+// FunÃ§Ã£o auxiliar:
 void hanoi (int discos, char origem, char destino, char aux){
     if(discos >= 1){
 		hanoi(discos-1, origem, aux, destino);
@@ -15,15 +15,15 @@ void hanoi (int discos, char origem, char destino, char aux){
 	}
 }
 
-// Função principal:
+// FunÃ§Ã£o principal:
 int main(){
 	setlocale (LC_ALL, "Portuguese");
     int discos = 0, operacao = 0;
     cout << "[TORRE DE HANOI]" << endl << endl;
-    cout << "Digite o número de discos: ";
+    cout << "Digite o nÃºmero de discos: ";
     cin >> discos;
     operacao = ((pow (2,discos))-1);
-    cout << endl << "Serão necessários apenas " << operacao << " movimentos, intruções: " << endl;
+    cout << endl << "SerÃ£o necessÃ¡rios apenas " << operacao << " movimentos, intruÃ§Ãµes: " << endl;
     hanoi(discos,'A','C','B');
     return 0;
 }
